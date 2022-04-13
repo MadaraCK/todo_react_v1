@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
     return (
-        <h1>Todo</h1>
+        <h1 className='todoStyle'>Todo</h1>
     );
 }
 

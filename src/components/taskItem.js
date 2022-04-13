@@ -1,11 +1,11 @@
 import React from 'react';
 
-function TaskItem({task,removeTask,changeStatus}) {
+function TaskItem({task, removeTask,changeStatus}) {
     return (
-        <li>
-            <span className={task.status ? 'status done' : 'status active'} onClick={() => changeStatus()} />
+        <li className='liList'>
+            <span  className={task.status ? 'status done' : 'status active'} onClick={() => changeStatus(task)} />
             {task.name}
-            <button onClick={() => removeTask(task)}>delete</button>
+            <button className='button-delete' onClick={() => removeTask(task)}>X</button>
         </li>
     );
 }

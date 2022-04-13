@@ -51,15 +51,17 @@ function App() {
     }
   return (
     <div className="App">
-        <Header/>
-        <TaskInput value={value} handleInput={handleInput} handleAddTask={handleAddTask}/>
-        <TaskList status={status} tasks={tasks} changeStatus={changeStatus} removeTask={removeTask}/>
+        <div className='todo-border'>
+         <Header/>
+         <TaskInput value={value} handleInput={handleInput} handleAddTask={handleAddTask}/>
+         <TaskList status={status} tasks={tasks} changeStatus={changeStatus} removeTask={removeTask}/>
 
-        {tasks.filter((task)=> task.status).length ? <button onClick={clearCompleted}>Remove Completed</button> : ''}
-        <div>
-            <button onClick={() => setStatus('all')}>All</button>
-            <button onClick={() => setStatus(false)}>Active</button>
-            <button onClick={() => setStatus(true)}>Done</button>
+         {tasks.filter((task)=> task.status).length ? <button className='button-text' onClick={clearCompleted}>Usuń zrobione</button> : ''}
+          <div>
+                <button className='button-color' onClick={() => setStatus('all')}>Wszystkie</button>
+             <button className='button-color' onClick={() => setStatus(false)}>Nie zrobione</button>
+              <button className='button-color' onClick={() => setStatus(true)}>zrobione</button>
+            </div>
         </div>
     </div>
   );

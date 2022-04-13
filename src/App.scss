@@ -1,5 +1,10 @@
+
 .App {
+  margin-top: 250px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+
 }
 
 .App-logo {
@@ -36,9 +41,16 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: lightseagreen;
+  font-family: 'Bebas Neue', cursive;
+
+}
 .status {
   display: inline-block;
+  margin-top: 10px;
   width: 20px;
+
   height: 20px;
   border-radius: 50%;
   margin-right: 20px;
@@ -50,4 +62,42 @@
   &.done{
     background-color: green;
   }
+}
+.todo-border{
+  background-color: white;
+  border: 2px solid black;
+  width: 400px;
+  min-height: 250px;
+}
+.liList{
+  list-style: none;
+  font-size: 20px;
+}
+
+.button-color{
+  background-color: lightseagreen;
+  color: white;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 40px 15px;
+}
+.button-text {
+  border: 1px solid black;
+  border-radius: 50px;
+  color: white;
+  padding: 7px;
+  font-size: 15px;
+  background: lightseagreen;
+}
+.button-delete{
+  color: red;
+  background-color: black;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin-left: 20px;
+}
+.todoStyle{
+  font-size: 36px;
+  letter-spacing: 2px;
 }
